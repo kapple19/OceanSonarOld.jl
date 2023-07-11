@@ -1,5 +1,7 @@
 module OceanSonar
 
-# Write your package code here.
+export OcnSon
+
+include("preamble.jl")
 
 end
