@@ -1,0 +1,13 @@
+name = "OceanSonar"
+uuid = "a7d3fdb7-e3e4-4197-b434-b0e9fe8574b3"
+authors = ["Aaron Kaw <aaronjkaw@gmail.com>"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.9"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
