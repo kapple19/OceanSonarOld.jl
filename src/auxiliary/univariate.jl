@@ -26,3 +26,15 @@ function univariate(y::Real; x_imp = [-Inf, Inf])
     fcn(x::Real) = y
     univariate(fcn, x_imp = x_imp)
 end
+
+"""
+```
+function univariate(x::AbstractVector{<:Real}, y::AbstractVector{<:Real})
+```
+
+Returns a univariate linear interpolation and flat extrapolation of input vector `x` for output vector `y`.
+"""
+function univariate(x::AbstractVector{<:Real}, y::AbstractVector{<:Real})
+	itp = linear_interpolation(x, y, extrapolation_bc = Flat())
+	univariate(x -> itp(x), x_imp = x)
+end

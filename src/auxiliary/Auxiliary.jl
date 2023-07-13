@@ -1,5 +1,7 @@
 @reexport module Auxiliary
 
+using Interpolations
+
 export uniquesort!
 export univariate
 

@@ -18,4 +18,14 @@
             @test u(x) == y
         end
     end
+
+	@testset "vectors" begin
+		x = 100sorted_random_floats(100) |> uniquesort!
+		y = f.(x)
+		u, x_imp = univariate(x, y)
+		@test x_imp == x
+		for (n, x_loop) = enumerate(x)
+			@test u(x_loop) == y[n]
+		end
+	end
 end
