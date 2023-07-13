@@ -6,4 +6,6 @@
         @test issorted(v)
         @test allunique(v)
     end
+
+    include("test_univariate.jl")
 end
