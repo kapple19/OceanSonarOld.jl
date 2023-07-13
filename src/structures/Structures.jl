@@ -1,3 +1,3 @@
-module Structures
+@reexport module Structures
 
 end

@@ -7,6 +7,15 @@ DocMeta.setdocmeta!(OceanSonar, :DocTestSetup, :(using OceanSonar); recursive = 
 # TODO
 
 ## Structure
+# General
+general = joinpath.("general",
+    [
+        "general.md"
+        "index.md"
+        "auxiliary.md"
+    ]
+)
+
 # Sonar Oceanography
 dir = joinpath("oceanography", "volume")
 volume = [
@@ -118,11 +127,6 @@ mathematics = [
     )
 ]
 
-auxiliary = [
-    "Introduction" => joinpath("auxiliary", "auxiliary.md")
-    "Mathematics" => mathematics
-]
-
 ## Build
 makedocs(;
     modules = [OceanSonar],
@@ -137,11 +141,11 @@ makedocs(;
     ),
     pages = [
         "Introduction" => "index.md",
+        "General" => general,
         "Sonar Oceanography" => oceanography,
         "Ocean Acoustics" => acoustics,
         "Sonar Signal Processing" => processing,
-        "Statistical Detection Theory" => detection,
-        "Auxiliary Implementations" => auxiliary
+        "Statistical Detection Theory" => detection
     ]
 )
 

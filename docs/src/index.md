@@ -1,14 +1,7 @@
-# OceanSonar
+# OceanSonar.jl
 
 ```@meta
 CurrentModule = OceanSonar
 ```
 
-Documentation for [OceanSonar](https://github.com/kapple19/OceanSonar.jl).
-
-```@index
-```
-
-```@autodocs
-Modules = [OceanSonar]
-```
+Documentation for [OceanSonar.jl](https://github.com/kapple19/OceanSonar.jl).
