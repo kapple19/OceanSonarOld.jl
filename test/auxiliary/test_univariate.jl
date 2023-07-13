@@ -9,4 +9,13 @@
             @test u(x) == f(x)
         end
     end
+
+    @testset "constant" for _ = 1 : 5
+        y = rand(Int) + rand()
+        u, x_imp = univariate(y)
+        for _ = 1 : 5
+            x = rand(Int) + rand()
+            @test u(x) == y
+        end
+    end
 end

@@ -14,3 +14,15 @@ function univariate(fcn::Function; x_imp = [-Inf, Inf])
 
     return fcn, x_imp
 end
+
+"""
+```
+function univariate(y::Real; x_imp = [-Inf, Inf])
+```
+
+Returns a univariate function of constant output `y`.
+"""
+function univariate(y::Real; x_imp = [-Inf, Inf])
+    fcn(x::Real) = y
+    univariate(fcn, x_imp = x_imp)
+end
