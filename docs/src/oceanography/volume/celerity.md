@@ -6,11 +6,77 @@ celerity
 celerities
 ```
 
-```@autodocs
-Modules = [OceanSonar.Models.Celerities]
+```@example
+using OceanSonar
+celerities
 ```
 
-## References
+## Arctic
 
-Jensen et al. (2011):
-> Jensen, F. B., Kuperman, W. A., Porter, M. B., Schmidt, H., & Tolstoy, A. (2011). *Computational ocean acoustics* (Vol. 2011). New York, NY: Springer New York.
+```@docs
+OceanSonar.Models.Celerities.arctic
+```
+
+```@example
+using OceanSonar
+using Plots
+
+c = Celerity("arctic")
+plot(c)
+```
+
+## Mediterranean
+
+```@docs
+OceanSonar.Models.Celerities.mediterranean
+```
+
+```@example
+using OceanSonar
+using Plots
+
+c = Celerity("mediterranean")
+plot(c)
+```
+
+## Munk Profile
+
+```@docs
+OceanSonar.Models.Celerities.munk
+```
+
+```@example
+using OceanSonar
+using Plots
+
+c = Celerity("munk")
+plot(c)
+```
+
+## North Atlantic
+
+```@docs
+OceanSonar.Models.Celerities.north_atlantic
+```
+
+```@example
+using OceanSonar
+using Plots
+
+c = Celerity("north_atlantic")
+plot(c)
+```
+
+## Squared Index
+
+```@docs
+OceanSonar.Models.Celerities.squared_index
+```
+
+```@example
+using OceanSonar
+using Plots
+
+c = Celerity("squared_index")
+plot(c)
+```
