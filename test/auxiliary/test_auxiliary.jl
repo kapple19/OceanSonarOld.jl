@@ -8,4 +8,5 @@
     end
 
     include("test_univariate.jl")
+    include("test_bivariate.jl")
 end

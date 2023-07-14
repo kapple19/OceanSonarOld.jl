@@ -12,7 +12,7 @@ function univariate(fcn::Function; x_imp = [-Inf, Inf])
         error("Inputted function not univariate.")
     end
 
-    return fcn, x_imp
+    return fcn, uniquesort!(x_imp)
 end
 
 """
