@@ -6,7 +6,7 @@ using ...Structures: Celerity
 """
 Munk celerity profile.
 
-Taken from Equation TODO of Jensen et al (2011).
+Taken from Equation TODO of Jensen, et al (2011).
 """
 munk = let
     function fcn(x::Real, z::Real; ϵ::Real = 7.37e-3)
@@ -20,7 +20,7 @@ end
 """
 Simplified north atlantic celerity profile.
 
-Taken from Table TODO of Jensen et al (2011).
+Taken from Table TODO of Jensen, et al (2011).
 """
 north_atlantic = let
     z_data = Float64[0, 300, 1200, 2e3, 5e3]
@@ -34,7 +34,7 @@ end
 """
 Simplified mediterranean celerity profile.
 
-Taken from Table TODO of Jensen et al (2011).
+Taken from Table TODO of Jensen, et al (2011).
 """
 mediterranean = let
     z_data = Float64[0, 100, 2500]
@@ -48,7 +48,7 @@ end
 """
 Simplified arctic celerity profile.
 
-Taken from Table TODO of Jensen et al (2011).
+Taken from Table TODO of Jensen, et al (2011).
 """
 arctic = let
     z_data = Float64[0, 300, 4000]
@@ -62,7 +62,7 @@ end
 """
 Squared-index profile.
 
-Taken from Equation TODO of Jensen et al (2011).
+Taken from Equation TODO of Jensen, et al (2011).
 """
 squared_index = let
     function fcn(x::Real, z::Real; c₀::Real = 1500.0)

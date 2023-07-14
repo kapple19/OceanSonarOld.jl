@@ -34,4 +34,41 @@ using Plots
     end
 end
 
+@recipe function _(rays::AbstractVector{<:Ray})
+    seriestype := :path
+    linecolor --> :blue
+    yflip := true
+    legend --> false
+    xguide --> "Range [m]"
+    yguide --> "Depth [m]"
+
+    xs = Vector{Float64}[]
+    zs = Vector{Float64}[]
+
+    for ray = rays
+        s = range(extrema(ray.s_imp)..., 101)
+
+        push!(xs, ray.x.(s))
+        push!(zs, ray.z.(s))
+    end
+
+    xs, zs
+end
+
+@recipe function _(ray::Ray)
+    [ray]
+end
+
+@recipe function _(trc::Trace)
+    rays = if isdefined(trc, :rays)
+        trc.rays
+    elseif isdefined(trc, :beams)
+        [beam.ray for beam in trc.beams]
+    else
+        error("Unrecognised `Trace` instance for plotting.")
+    end
+
+    rays
+end
+
 end
