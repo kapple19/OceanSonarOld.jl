@@ -17,14 +17,20 @@ general = joinpath.("general",
 )
 
 # Sonar Oceanography
+dir = joinpath("oceanography", "volume", "celerity")
+celerity = joinpath.(dir,
+    [
+        "celerity.md"
+        "ocean_celerity.md"
+        "atmosphere_celerity.md"
+        "seabed_celerity.md"
+    ]
+)
+
 dir = joinpath("oceanography", "volume")
 volume = [
-    "Introduction" => joinpath(dir, "volume.md")
-    joinpath.(dir,
-        [
-            "celerity.md"
-        ]
-    )
+    "Introduction" => joinpath(dir, "volume.md");
+    celerity
 ]
 
 dir = joinpath("oceanography", "surface")

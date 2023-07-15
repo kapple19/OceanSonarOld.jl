@@ -1,20 +1,18 @@
-# Sound Speed (Celerity)
+# Oceanic Celerity
 
 ```@docs
-Celerity
-celerity
-celerities
+ocean_celerities
 ```
 
 ```@example
 using OceanSonar
-celerities
+ocean_celerities
 ```
 
 ## Arctic
 
 ```@docs
-OceanSonar.Models.Celerities.arctic
+OceanSonar.Models.OceanCelerities.arctic
 ```
 
 ```@example
@@ -28,7 +26,7 @@ plot(c)
 ## Mediterranean
 
 ```@docs
-OceanSonar.Models.Celerities.mediterranean
+OceanSonar.Models.OceanCelerities.mediterranean
 ```
 
 ```@example
@@ -42,7 +40,7 @@ plot(c)
 ## Munk Profile
 
 ```@docs
-OceanSonar.Models.Celerities.munk
+OceanSonar.Models.OceanCelerities.munk
 ```
 
 ```@example
@@ -56,7 +54,7 @@ plot(c)
 ## North Atlantic
 
 ```@docs
-OceanSonar.Models.Celerities.north_atlantic
+OceanSonar.Models.OceanCelerities.north_atlantic
 ```
 
 ```@example
@@ -70,7 +68,7 @@ plot(c)
 ## Squared Index
 
 ```@docs
-OceanSonar.Models.Celerities.squared_index
+OceanSonar.Models.OceanCelerities.squared_index
 ```
 
 ```@example

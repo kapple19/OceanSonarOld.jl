@@ -1,4 +1,4 @@
-module Celerities
+module OceanCelerities
 
 using ...Auxiliary: univariate
 using ...Structures: Celerity
